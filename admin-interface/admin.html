@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <h1>Admin Dashboard</h1>
+
+  <section id="server-controls">
+    <h2>Server Controls</h2>
+    <button start-server>Start Server</button>
+    <button stop-server>Stop Server</button>
+    <button view-logs>View Logs</button>
+  </section>
+
+  <section id="internal-accounts">
+    <h2>Internal Accounts</h2>
+    <button id="add-account">Add Account</button>
+    <table id="internal-accounts-table">
+      <thead>
+        <tr>
+          <th>Username</th>
+          <th>Platform</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <div id="add-account-form" style="display: none;">
+      <input type="text" id="new-username" placeholder="Username">
+      <input type="text" id="new-platform" placeholder="Platform">
+      <button id="save-account">Save</button>
+      <button id="cancel-add-account">Cancel</button>
+    </div>
+  </section>
+
+  <section id="external-users">
+    <h2>External Users</h2>
+    <table id="external-users-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Platform</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <div id="send-message-form" style="display: none;">
+      <select id="external-user-select"></select>
+      <textarea id="message-text" placeholder="Enter your message"></textarea>
+      <button id="send-message">Send Message</button>
+      <button id="cancel-send-message">Cancel</button>
+    </div>
+    <button id="show-send-message-form">Send Message</button>
+  </section>
+
+  <script src="admin-controls.js"></script>
+</body>
+</html>
